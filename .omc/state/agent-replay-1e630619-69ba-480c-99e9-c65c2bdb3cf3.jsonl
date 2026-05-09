@@ -1,6 +1,0 @@
-{"t":0,"agent":"system","event":"skill_invoked","skill_name":"oh-my-claudecode:plan"}
-{"t":0,"agent":"a7145be","agent_type":"architect","event":"agent_start","parent_mode":"none"}
-{"t":0,"agent":"a7145be","agent_type":"architect","event":"agent_stop","success":true,"duration_ms":48271}
-{"t":0,"agent":"a727e05","agent_type":"critic","event":"agent_start","parent_mode":"none"}
-{"t":0,"agent":"a727e05","agent_type":"critic","event":"agent_stop","success":true,"duration_ms":55356}
-{"t":0,"agent":"system","event":"skill_invoked","skill_name":"oh-my-claudecode:autopilot"}
