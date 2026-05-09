@@ -1,0 +1,44 @@
+/* ===== eunbc theme overrides (≤ 50 lines, partial overrides minimal) ===== */
+:root {
+    --primary-color: #3a5a40;
+    --secondary-color: #588157;
+    --tertiary-color: #a3b18a;
+}
+
+.light {
+    --theme: #fefefe;
+    --entry: #f7f7f5;
+    --primary: #1a1a1a;
+    --secondary: #4a4a4a;
+    --tertiary: var(--tertiary-color);
+    --content: #2a2a2a;
+    --code-block-bg: #1f1f1f;
+    --code-bg: #f0ede5;
+    --border: #e4e1d6;
+}
+
+.dark {
+    --theme: #1a1d1c;
+    --entry: #242827;
+    --primary: #e9efe7;
+    --secondary: #b6c2b9;
+    --tertiary: var(--secondary-color);
+    --content: #d4dad6;
+    --code-block-bg: #14171a;
+    --code-bg: #2a2f2c;
+    --border: #2c3230;
+}
+
+body {
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont,
+        "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+}
+
+code, pre, kbd, .post-content code {
+    font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas,
+        "Liberation Mono", monospace;
+}
+
+.post-title { color: var(--secondary-color); }
+a { color: var(--secondary-color); }
+.entry-link:hover .entry-header { color: var(--secondary-color); }

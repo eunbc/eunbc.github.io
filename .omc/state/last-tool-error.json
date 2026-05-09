@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"hugo --gc --minify 2>&1 | tail -20 && echo \\\"---PUBLIC---\\\" && ls public/ 2>/dev/null | head -10 && echo \\\"---INDEX HEAD---\\\" && head -c 500 public/index.html 2>/dev/null && echo \\\"\\\"\",\"de...",
+  "error": "Exit code 1\nWARN  deprecated: project config key languageCode was deprecated in Hugo v0.158.0 and will be removed in a future release. Use locale instead.\nStart building sites … \nhugo v0.161.1+extended+withdeploy darwin/arm64 BuildDate=2026-04-29T13:56:01Z VendorInfo=Homebrew\n\nWARN  deprecated: .Language.LanguageDirection was deprecated in Hugo v0.158.0 and will be removed in a future release. Use .Language.Direction instead.\nWARN  Doubtful use of partial function in {{ partial \"partials/templat...",
+  "timestamp": "2026-05-09T08:21:46.419Z",
+  "retry_count": 1
+}
