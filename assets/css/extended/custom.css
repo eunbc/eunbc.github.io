@@ -1,44 +1,47 @@
-/* ===== eunbc theme overrides (≤ 50 lines, partial overrides minimal) ===== */
+/* eunbc theme — Forest green accent + Korean typography (≤50 lines) */
+
+/* Brand color: applied to the spots PaperMod actually shows accent on */
 :root {
-    --primary-color: #3a5a40;
-    --secondary-color: #588157;
-    --tertiary-color: #a3b18a;
+    --accent: #3a5a40;
+    --accent-light: #588157;
+    --accent-soft: #a3b18a;
 }
-
-.light {
-    --theme: #fefefe;
-    --entry: #f7f7f5;
-    --primary: #1a1a1a;
-    --secondary: #4a4a4a;
-    --tertiary: var(--tertiary-color);
-    --content: #2a2a2a;
-    --code-block-bg: #1f1f1f;
-    --code-bg: #f0ede5;
-    --border: #e4e1d6;
-}
-
 .dark {
-    --theme: #1a1d1c;
-    --entry: #242827;
-    --primary: #e9efe7;
-    --secondary: #b6c2b9;
-    --tertiary: var(--secondary-color);
-    --content: #d4dad6;
-    --code-block-bg: #14171a;
-    --code-bg: #2a2f2c;
-    --border: #2c3230;
+    --accent: #a3b18a;
+    --accent-light: #c8d3b6;
+    --accent-soft: #588157;
 }
 
+/* Typography */
 body {
     font-family: "Pretendard", -apple-system, BlinkMacSystemFont,
         "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
 }
-
-code, pre, kbd, .post-content code {
-    font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas,
-        "Liberation Mono", monospace;
+code, pre, kbd, .post-content code, .highlight pre code {
+    font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
-.post-title { color: var(--secondary-color); }
-a { color: var(--secondary-color); }
-.entry-link:hover .entry-header { color: var(--secondary-color); }
+/* Accent surfaces */
+a, a:visited { color: var(--accent); }
+a:hover { color: var(--accent-light); text-decoration: underline; }
+
+.post-title { color: var(--accent); }
+.entry-link:hover .entry-header { color: var(--accent); }
+.first-entry .entry-header { color: var(--accent); }
+.post-meta { color: var(--accent-light); }
+
+.post-tags li a {
+    border-color: var(--accent-soft);
+    color: var(--accent);
+}
+.post-tags li a:hover {
+    background: var(--accent);
+    color: var(--theme);
+    border-color: var(--accent);
+}
+
+#menu .active { color: var(--accent); border-color: var(--accent); }
+.logo a:hover, .menu a:hover { color: var(--accent); }
+
+.post-content code { background: rgba(58, 90, 64, 0.12); }
+.dark .post-content code { background: rgba(163, 177, 138, 0.18); }
