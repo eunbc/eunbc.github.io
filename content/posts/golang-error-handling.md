@@ -1,6 +1,6 @@
 ---
 title: "Go 에러 핸들링 개선기 - 단순함에 Go며들었다.."
-date: 2026-05-11T21:30:00+09:00
+date: 2025-05-29T09:30:00+09:00
 draft: false
 tags: ["go", "error-handling", "backend"]
 categories: ["go"]
@@ -15,9 +15,9 @@ cover:
   hidden: true
 ---
 
-안녕하세요! 시스템개발팀 레인입니다 ☔️
+안녕하세요! 레인입니다 ☔️
 
-저희 시스템개발팀에서는 Go를 주력 언어로 사용중이고, 최근 로케이션 서버의 에러 핸들링 구조 개선 작업을 진행했습니다. Go의 에러 처리 개념부터 실제 API 서버에 적용한 방법까지 공유드리고자 합니다.
+현재 사내에서 Go를 주력 언어로 사용중이고, 최근 Go 서버의 에러 핸들링 구조 개선 작업을 진행했습니다. Go의 에러 처리 개념부터 실제 API 서버에 적용한 방법까지 공유드리고자 합니다.
 
 ![스크린샷 2025-05-28 오후 12.38.05.png](/images/golang-error-handling/9fc5b5921682d99a.png)
 
@@ -179,9 +179,9 @@ ErrorHandler: func(ctx *fiber.Ctx, err error) error {
 }
 ```
 
-## 4. Location API 서버 Before → After
+## 4. API 서버 Before → After
 
-그래서 이 모든것을 종합하여 로케이션 서버를 어떻게 리팩토링 했냐면…!
+그래서 이 모든것을 종합하여 서버를 어떻게 리팩토링 했냐면…!
 
 처음 보는 사람도 읽기 쉬운 코드이면서, 유지보수성을 높일 수 있는 방향으로 설계하고자 하였습니다.
 
@@ -249,11 +249,7 @@ func (s StatusController) GetStatus(c *fiber.Ctx) error {
     if err := validator.New().Struct(params); err != nil {
         return ErrValidationFailed
     }
-
-    if params.LockSn == nil && params.BicycleSn == nil {
-        return fmt.Errorf("StatusController.GetStatus: %w", apperror.ErrParameterRequired)
-    }
-
+	
     result, err := s.StatusUsecase.Status(c.Context(), *params)
     if err != nil {
         return fmt.Errorf("StatusUsecase.Status: %w", err)
@@ -330,7 +326,7 @@ var (
 
 ## 5. 마무리
 
-여기까지 1) Go 에러의 특징, 2) API 서버에서 에러 핸들링을 어떻게 하면 좋을지, 3) 실제로 로케이션 서버에서는 어떻게 적용했는지까지 살펴보았습니다.
+여기까지 1) Go 에러의 특징, 2) API 서버에서 에러 핸들링을 어떻게 하면 좋을지, 3) 실제로 서버에서는 어떻게 적용했는지까지 살펴보았습니다.
 
 - Go에서는 에러도 하나의 값이다
 
@@ -344,9 +340,8 @@ var (
 
 Go의 단순함과 함께 명료한 코드를 작성해보아요~!
 
-언제든 질문과 피드백은 환영합니다 :)
 
-이상, 레인이었습니다! ☂️
+
 
 **📚참고 자료**
 
