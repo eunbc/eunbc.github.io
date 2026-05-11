@@ -4,7 +4,7 @@ date: 2025-05-29T09:30:00+09:00
 draft: false
 tags: ["go", "error-handling", "backend"]
 categories: ["go"]
-summary: "Go의 에러 처리 철학(에러는 값이다, 명시적 처리)을 짚고, 에러 래핑·센티넬 에러·errors.Is/As·전역 ErrorHandler를 활용해 Location API 서버의 에러 핸들링 구조를 개선한 과정 공유."
+summary: "Go의 에러 처리 철학(에러는 값이다, 명시적 처리)을 짚고, 에러 래핑·센티넬 에러·errors.Is/As·전역 ErrorHandler를 활용해 API 서버의 에러 핸들링 구조를 개선한 과정 공유."
 slug: "golang-error-handling-improvement"
 ShowToc: true
 TocOpen: false
