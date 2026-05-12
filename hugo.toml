@@ -26,10 +26,9 @@ DateFormat = "2006-01-02"
 description = "Curated notes & portfolio"
 
 [params.homeInfoParams]
-Title = "안녕하세요, eunbc 입니다 👋"
+Title = "Everything starts with *why*."
 Content = """
-백엔드/풀스택 영역에서 작업하며 배운 것들을 천천히 정리합니다.
-이 공간은 포트폴리오이자 개인 아카이브예요.
+'왜'라는 질문에서 시작하고, 데이터로 검증하고, 구조로 남기는 백엔드 엔지니어
 """
 
 [[params.socialIcons]]
@@ -39,6 +38,10 @@ url = "https://github.com/eunbc"
 [[params.socialIcons]]
 name = "email"
 url = "mailto:joeunbi0514@gmail.com"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/eunbi-cho-78b5201b8/"
 
 [params.assets]
 disableHLJS = false
