@@ -21,14 +21,14 @@ ShowCodeCopyButtons = true
 ShowWordCount = true
 ShowBreadCrumbs = false
 ShowPostNavLinks = true
-ShowRssButtonInSectionTermList = true
+ShowRssButtonInSectionTermList = false
 DateFormat = "2006-01-02"
 description = "Curated notes & portfolio"
 
 [params.homeInfoParams]
 Title = "Everything starts with *why*."
 Content = """
-'왜'라는 질문에서 시작하고, 데이터로 검증하고, 구조로 남기는 백엔드 엔지니어
+'왜'라는 질문에서 시작하고, 데이터로 검증하고, 구조로 남기는 백엔드 엔지니어 조은비입니다.
 """
 
 [[params.socialIcons]]
@@ -55,6 +55,12 @@ identifier = "posts"
 name = "Posts"
 url = "/posts/"
 weight = 10
+
+[[menu.main]]
+identifier = "books"
+name = "Books"
+url = "/books/"
+weight = 15
 
 [[menu.main]]
 identifier = "about"
